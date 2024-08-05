@@ -1,12 +1,12 @@
-import { Box, LinearProgress, Stack } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { Box, LinearProgress, Stack } from '@mui/material';
+import { useParams } from 'react-router-dom';
 
-import { useGetArtworkDetailsQuery } from "services/artic/artic";
+import { useGetArtworkDetailsQuery } from 'services/artic/artic';
 
-import { ArtworkSummary } from "./artwork-summary";
-import { ErrorMessage } from "./error-message";
-import { HeroArtwork } from "./hero-artwork";
-import { ArtworkMetadataTable } from "./artwork-metadata-table";
+import { ArtworkSummary } from './artwork-summary';
+import { ErrorMessage } from './error-message';
+import { HeroArtwork } from './hero-artwork';
+import { ArtworkMetadataTable } from './artwork-metadata-table';
 
 export const ArtworkDetails = () => {
   const { id } = useParams();

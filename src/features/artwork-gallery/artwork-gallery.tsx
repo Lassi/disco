@@ -1,10 +1,10 @@
 import { Masonry } from '@mui/lab';
-import { Box, LinearProgress, Stack } from "@mui/material";
+import { Box, LinearProgress, Stack } from '@mui/material';
 
 import { useAppSelector } from 'app/hooks';
 import { Pagination } from 'features/pagination/pagination';
 import { selectPage } from 'features/pagination/paginationSlice';
-import { useGetArtworksQuery } from "services/artic/artic";
+import { useGetArtworksQuery } from 'services/artic/artic';
 
 import { ArtworkPreview } from './artwork-preview';
 import { ErrorMessage } from './error-message';

@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+import { Typography } from '@mui/material';
 import { buildImageSrc } from 'services/artic/images';
 
-import { RoutedLink } from "lib/routed-link/routed-link";
-import { routes } from "app/routes";
+import { RoutedLink } from 'lib/routed-link/routed-link';
+import { routes } from 'app/routes';
 
 type ArtworkPreviewProps = {
   id: number;

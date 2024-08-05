@@ -1,6 +1,6 @@
-import { Box } from "@mui/material";
+import { Box } from '@mui/material';
 
-import { buildImageSrc, imageFullWidth } from "services/artic/images";
+import { buildImageSrc, imageFullWidth } from 'services/artic/images';
 
 type HeroArtworkProps = {
   imageAlt: string;

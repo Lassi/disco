@@ -1,4 +1,11 @@
-import { Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableRow,
+  Typography,
+} from '@mui/material';
 
 type ArtworkMetadataTableProps = {
   artist: string;
