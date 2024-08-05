@@ -8,7 +8,7 @@ type ArtworkPreviewProps = {
   id: number;
   artist: string;
   date: string;
-  imageAlt: string;
+  imageAlt?: string;
   imageId: string;
   title: string;
 };
@@ -23,7 +23,7 @@ export const ArtworkPreview = ({
 }: ArtworkPreviewProps) => (
   <RoutedLink to={routes.artworkDetails(id)}>
     <img
-      alt={imageAlt}
+      alt={imageAlt ?? title}
       src={buildImageSrc(imageId, 'preview')}
       style={{ width: '100%'}}
     />

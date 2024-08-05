@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
+import { RootState } from 'app/store';
+
 import { GetArtworkDetailsResponse, GetArtworksResponse } from './types';
 
 export const artic = createApi({
@@ -16,7 +18,7 @@ export const artic = createApi({
           'thumbnail',
           'title',
         ].concat(',');
-        return `/artworks?fields=${fields}`;
+        return `/artworks?page=${page}&fields=${fields}`;
       },
     }),
     getArtworkDetails: builder.query<GetArtworkDetailsResponse, string>({

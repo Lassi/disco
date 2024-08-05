@@ -1,5 +1,4 @@
 type Pagination = {
-  current_page: number;
   total_pages: number;
 };
 
@@ -15,9 +14,7 @@ type GetArtworksRawData = {
 };
 
 export type GetArtworksResponse = {
-  config: unknown;
   data: GetArtworksRawData[];
-  info: unknown;
   pagination: Pagination;
 };
 
@@ -39,7 +36,5 @@ type GetArtworkDetailsRawData = {
 };
 
 export type GetArtworkDetailsResponse = {
-  config: unknown;
   data: GetArtworkDetailsRawData;
-  info: unknown;
 };
