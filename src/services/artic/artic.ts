@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-import { RootState } from 'app/store';
-
 import { GetArtworkDetailsResponse, GetArtworksResponse } from './types';
+
+const PAGINATION_LIMIT = 50;
 
 export const artic = createApi({
   reducerPath: 'artic',
@@ -18,7 +18,7 @@ export const artic = createApi({
           'thumbnail',
           'title',
         ].concat(',');
-        return `/artworks?page=${page}&fields=${fields}`;
+        return `/artworks?page=${page}&limit=${PAGINATION_LIMIT}&fields=${fields}`;
       },
     }),
     getArtworkDetails: builder.query<GetArtworkDetailsResponse, string>({
