@@ -4,19 +4,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 
-function App() {
-  return (
-    <Box>
-      <AppBar component="nav" position="static">
-        <Toolbar>
-          <Typography variant="h6">Disco</Typography>
-        </Toolbar>
-      </AppBar>
-      <Box component="main" p={3}>
-        Hello, Disco!
-      </Box>
+export const App = () => (
+  <Box>
+    <AppBar component="nav" position="static">
+      <Toolbar>
+        <Typography variant="h6">Disco</Typography>
+      </Toolbar>
+    </AppBar>
+    <Box component="main" p={3}>
+      Hello, Disco!
     </Box>
-  );
-}
-
-export default App;
+  </Box>
+);
