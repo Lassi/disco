@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Hey there Disco team! 👋🏼
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+This project was bootstrapped with Create React App, and among others it uses
+React Router, Redux Toolkit, Typescript, React, and MaterialUI.
 
-## Available Scripts
+To be able to try everything, you will probably need to install the
+dependencies first by running `npm install`.
 
-In the project directory, you can run:
+Once this is done, you can run the server with `npm start` from this directory.
 
-### `npm start`
+This will run the app in development mode and you will be able to see it by
+opening [http://localhost:3000](http://localhost:3000) in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can also run `npm test` but there isn't a lot of tests unfortunately, I
+had to prioritise finishing everything over testing 😓
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Quick tour of the codebase:
 
-### `npm test`
+- `src/app` hosts config that are required to run the app (redux, routing, theme,
+...)
+- `src/features` is where most of the application code is, redux or not, I haven't
+worked in a redux  codebase in the last 3 years and I'm not sure what the current
+best practices are around code organisation so I chucked things there
+- `src/lib` is just for small helper functions/components
+- `src/services` is where the RTK query stuff lives as that's what they seemed to suggest
+in the resources I've read. Again, never used RTK in a real project before so not
+sure if that's the way to go 😅
+- `src/index` is binding everything together and `src/main` is my main layout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A few things that could have been done better:
 
-### `npm run build`
+- More Redux? I found it hard to figure out what to use redux for since with
+RTK Query the entire app could probablyrun just through that abstraction. I
+added a bit of a dummy store to handle the pagination just to show that I can
+create a slice/test a reducer/use selectors 😂
+- The routes could be lazy loaded via Suspense/lazy but I didn't get enough
+time to do that ⏰️
+- More test would have been nice but again, I was short on time and wanted to
+have something that was OK-ish and sort of functional 😅
+- The loading is baaaaad and would benefit from a better image component that
+would have a placeholder. It's a matter of creating a base Image object and
+then adding listening to the `onload` event, then swapping the placeholder
+for the redenred image when the event is triggered. Another option is to
+preload a super small version of the image and apply a blur on it. It's more
+in line with the idea of "progressive immage loading".
+- I tried to reproduce the Artic website and as a result a lot of things are
+hardcoded to look like it. Not great but again, it was in the interest of
+saving time 😆
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you have any questions, feel free to reach out! Hopefully it makes sense!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Have a wonderful day 🌈
