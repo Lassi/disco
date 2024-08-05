@@ -26,6 +26,7 @@ export const ArtworkGallery = () => {
             {data.data.map((artwork) => (
               <ArtworkPreview
                 key={artwork.id}
+                id={artwork.id}
                 artist={artwork.artist_title}
                 date={artwork.date_display}
                 imageAlt={artwork.thumbnail.alt_text}

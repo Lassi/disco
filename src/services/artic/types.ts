@@ -20,3 +20,26 @@ export type GetArtworksResponse = {
   info: unknown;
   pagination: Pagination;
 };
+
+type GetArtworkDetailsRawData = {
+  artist_display: string;
+  credit_line: string;
+  date_display: string;
+  description: string;
+  dimensions: string;
+  image_id: string;
+  inscriptions?: string;
+  main_reference_number: string;
+  medium_display: string;
+  place_of_origin: string;
+  thumbnail: {
+    alt_text: string;
+  };
+  title: string;
+};
+
+export type GetArtworkDetailsResponse = {
+  config: unknown;
+  data: GetArtworkDetailsRawData;
+  info: unknown;
+};

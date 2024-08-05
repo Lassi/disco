@@ -6,13 +6,17 @@ import {
   Toolbar,
   Typography,
 }from '@mui/material';
+import { routes } from 'app/routes';
+import { RoutedLink } from 'lib/routed-link/routed-link';
 import { Outlet } from 'react-router-dom';
 
 export const App = () => (
   <Box>
     <AppBar component="nav" position="sticky">
       <Toolbar>
-        <Typography variant="h6">Disco</Typography>
+        <RoutedLink to={routes.home()}>
+          <Typography variant="h6">Disco</Typography>
+        </RoutedLink>
       </Toolbar>
     </AppBar>
     <Box component="main">
