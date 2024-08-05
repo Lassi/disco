@@ -1,11 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { paginationReducer } from 'features/pagination/paginationSlice';
 import { artic } from 'services/artic/artic';
 
 export const store = configureStore({
   reducer: {
     [artic.reducerPath]: artic.reducer,
-    counter: counterReducer,
+    pagination: paginationReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(artic.middleware),
 });
