@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
+import { Outlet } from 'react-router-dom';
 
 export const App = () => (
   <Box>
@@ -14,7 +14,7 @@ export const App = () => (
       </Toolbar>
     </AppBar>
     <Box component="main" p={3}>
-      Hello, Disco!
+      <Outlet/>
     </Box>
   </Box>
 );
