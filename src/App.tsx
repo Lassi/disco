@@ -1,5 +1,7 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
@@ -14,5 +16,24 @@ export const App = () => (
     <Box component="main" p={3}>
       Hello, Disco!
     </Box>
+  </Box>
+);
+
+export const Error = () => (
+  <Box
+    alignItems="center"
+    display="flex"
+    height="100vh"
+    justifyContent="center"
+  >
+    <Stack
+      alignItems="center"
+      direction="row"
+      spacing={3}
+    >
+      <Typography variant="h3">404</Typography>
+      <Divider orientation='vertical' flexItem/>
+      <Typography>This page could not be found</Typography>
+    </Stack>
   </Box>
 );
