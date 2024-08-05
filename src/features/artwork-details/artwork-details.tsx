@@ -27,8 +27,9 @@ export const ArtworkDetails = () => {
       {data && (
         <Stack>
           <HeroArtwork
-            imageAlt={data.data.thumbnail.alt_text}
+            imageAlt={data.data.thumbnail?.alt_text}
             imageId={data.data.image_id}
+            title={data.data.title}
           />
           <Stack px={50} py={5} spacing={3}>
             <ArtworkSummary

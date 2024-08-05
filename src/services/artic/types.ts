@@ -7,7 +7,7 @@ type GetArtworksRawData = {
   artist_title: string;
   image_id: string;
   date_display: string;
-  thumbnail: {
+  thumbnail?: {
     alt_text: string;
   };
   title: string;
@@ -29,7 +29,7 @@ type GetArtworkDetailsRawData = {
   main_reference_number: string;
   medium_display: string;
   place_of_origin: string;
-  thumbnail: {
+  thumbnail?: {
     alt_text: string;
   };
   title: string;

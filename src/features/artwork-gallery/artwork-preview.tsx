@@ -27,7 +27,17 @@ export const ArtworkPreview = ({
       src={buildImageSrc(imageId, 'preview')}
       style={{ width: '100%'}}
     />
-    <Typography variant="h6">{title}, {date}</Typography>
+    <Typography
+      variant="h6"
+      sx={{
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        WebkitLineClamp: '2',
+        WebkitBoxOrient: 'vertical',
+      }}>
+        {title}, {date}
+      </Typography>
     <Typography color="GrayText" variant="subtitle1">{artist}</Typography>
   </RoutedLink>
 );
